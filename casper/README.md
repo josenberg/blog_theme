@@ -1,3 +1,6 @@
+This theme is based on the default theme of ghost blogs, **Casper**,
+the licence of this theme is the same of the original theme.
+
 # Casper
 
 The default theme for [Ghost](http://github.com/tryghost/ghost/).
