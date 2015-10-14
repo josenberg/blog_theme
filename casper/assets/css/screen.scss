@@ -165,40 +165,50 @@ table { border-collapse: collapse; border-spacing: 0; }
 /* Customs styles */
 header.main-header {
   width: 600px;
+  max-width: 100%;
   margin: 0 auto;
   h1 {
     font-size: 70px;
   }
   h2 {
     font-size: 20px;
-    margin: 0px 0px 60px 0px;
+    margin: 0px 0px 45px;
   }
-
-
 }
 
 
 .content {
   width: 600px;
+  max-width: 100%;
   margin: 0 auto;
   h2.post-title-category {    
     text-transform: uppercase;
     font-family: 'VT323';
     margin-top: 0px;
-    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(227, 227, 227);
+    margin-bottom: 15px;
+    padding-bottom: 25px;
   }
 
 
 }
 
+article:nth-child(1){
+  background-color: red;
+}
+
+
 .post {
   margin: 0 auto;
+  &:first-child {
+    
+    h2.post-title {
+      border-top: 1px solid #E3E3E3 !important;
+    }      
+    
+  }
   .post-header {
-    &:first-child {
-      h2.post-title {
-        border-top: 1px solid #E3E3E3;
-      }      
-    }
+    
     h2.post-title {
       font-size: 26px;
       margin-top: 0px;
@@ -215,3 +225,77 @@ header.main-header {
   }
 }
 
+nav.pagination {
+  position: relative;
+  width: 100%;
+  margin-bottom: 150px;
+  a {
+    color: black;    
+  }
+  .page-number {
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+  .older-posts {      
+    position: absolute;
+    margin-left: -92px;
+    right: 10px;
+    top: 0px;
+  }
+  .newer-posts {
+    position: absolute;    
+    left: 10px;
+    top: 0px; 
+  }
+  
+}
+
+footer.site-footer {
+  background-color: black;
+  color: white;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  section {
+    width: 600px;
+    max-width: 100%;
+    margin: 0 auto;  
+    a {
+      color: white;
+    }
+  }
+}
+
+
+@media (max-width: 600px) {
+  header.main-header {
+    text-align: center;
+  }
+  .content h2.post-title-category{
+    padding: 15px;
+  }
+  .post {
+    h2 {
+      a {
+        padding-left: 20px;    
+        display: block;
+      }            
+    }    
+    .post-header {
+      
+      h2.post-title {
+        font-size: 18px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #E3E3E3;
+        padding-bottom: 10px;        
+      }
+    }
+  }
+  footer.site-footer {
+    text-align: center;
+  }
+}

@@ -29,14 +29,11 @@
     {{{body}}}
 
     <footer class="site-footer clearfix">
-        <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="MMMM Do, YYYY"}}</section>
-        <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a></section>
+        <section class="poweredby">Desenvolvido com Ghost <a href="https://ghost.org">Ghost</a></section>
     </footer>
-
     {{! Ghost outputs important scripts and data with this tag }}
-    {{ghost_foot}}
-
-    {{! The main JavaScript file for Casper }}
+    {{ghost_foot}}    
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
 
